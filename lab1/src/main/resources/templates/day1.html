@@ -1,0 +1,38 @@
+DECLARE
+A NUMBER(5);
+BEGIN
+A := &A;
+IF MOD(A,2)=0 THEN
+DBMS_OUTPUT.PUT_LINE(A||' IS AN EVEN NUMBER!');
+ELSE
+DBMS_OUTPUT.PUT_LINE(A||' IS AN ODD NUMBER!');
+END IF;
+END;
+/
+--------------
+DECLARE
+A NUMBER(5);
+B NUMBER(5);
+C NUMBER(5);
+BEGIN
+A := &A;
+B := &B;
+C := A+B;
+DBMS_OUTPUT.PUT_LINE('THE SUM OF '||A||' AND '||'B'||' is:'||C);
+END;
+/
+--------------
+ DECLARE
+A NUMBER(5);
+BEGIN
+A := &A;
+IF (MOD(A,4)=0 AND MOD(A,100)!=0) OR(MOD(A,400)=0) THEN
+DBMS_OUTPUT.PUT_LINE(A||' IS AN LEAP YEAR!');
+ELSE
+DBMS_OUTPUT.PUT_LINE(A||' IS NOT A LEAP YEAR!');
+END IF;
+END;
+/
+-------------------------------
+
+
